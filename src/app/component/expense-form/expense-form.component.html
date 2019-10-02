@@ -1,0 +1,35 @@
+<app-navigation></app-navigation>
+<div class="container text-white main-div">
+    <h2 class="text-center">{{title}}</h2>
+
+    <!-- #epense = "ngForm" -->
+    <form (ngSubmit)="onSubmit(expense)" #expense="ngForm" class="card">
+        <div class="container">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input [(ngModel)]="newExpense.name" name="name" type="text" id="name" class="form-control"
+                    placeholder="Enter Name of Expense" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select [(ngModel)]="newExpense.type" name="type" list="typeList" id="type" class="custom-select" autocomplete="off">
+                    <option *ngFor="let type of types" [value]="type">{{type}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amnt">Amount</label>
+                <input [(ngModel)]="newExpense.amount" name="amount" type="text" id="amnt" placeholder="00.00"
+                    class="form-control" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="d">Date</label>
+                <input [(ngModel)]="newExpense.date" name="date" type="date" id="d" class="form-control" required>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

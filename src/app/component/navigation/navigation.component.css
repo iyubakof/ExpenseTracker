@@ -1,0 +1,14 @@
+nav {
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
+    /* background */
+    background: rgba(1, 218, 202, 1);
+    background: -moz-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 80%, rgba(138, 28, 124, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(1, 218, 202, 1)), color-stop(80%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(138, 28, 124, 1)));
+    background: -webkit-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 80%, rgba(138, 28, 124, 1) 100%);
+    background: -o-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 80%, rgba(138, 28, 124, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 80%, rgba(138, 28, 124, 1) 100%);
+    background: linear-gradient(to right, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 80%, rgba(138, 28, 124, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01daca', endColorstr='#8a1c7c', GradientType=1);
+}

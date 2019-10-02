@@ -1,0 +1,43 @@
+<app-navigation></app-navigation>
+<div class="container text-white main-div">
+    <div class="row">
+        <div class="col-sm-12">
+            <a routerLink='/incomeform' [state]="{add:true, title:'Add Income'}" routerLinkActive="router-link-active"
+                class="btn btn-primary addbtn">+</a>
+        </div>
+    </div>
+
+    <h2 class="text-center">Income</h2>
+
+    <!-- <div class="card text-white"> -->
+    <div *ngFor="let income of incomeItems" class="container">
+        <div class="card income-card">
+            <div class="container">
+                <div class="row title-row">
+                    <div class="card-title col-8">{{ income.name }}</div>
+                    <div class="col-4 amount">
+                        <button type="button" (click)="update(income, income.id)"
+                            class="btn btn-primary float-right">{{income.amount | currency}}</button>
+                    </div>
+                </div>
+                <p class="type">{{income.type}}</p>
+                <!-- <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+                <div class="row">
+                    <div class="col-sm-9">
+                        <p>{{ income.date | date:shortdate}}</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <button (click)="delete(income.id)"
+                            class="btn btn-warning text-white deletebtn float-right">x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <h5 class="text-center">Income Total: {{ totalIncome() | currency }}</h5>
+</div>

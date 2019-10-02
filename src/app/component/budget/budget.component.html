@@ -1,0 +1,23 @@
+<app-navigation></app-navigation>
+
+<div class="container text-white main-div">
+    <h2 class="text-center">Budget</h2>
+    <p class="monthlbl">Month: {{ getCurrMonth() }}</p>
+
+    <!-- <div class="card text-white"> -->
+    <div *ngFor="let budget of budgetItems" class="container">
+        <div class="card">
+            <div class="container">
+                <div class="card-title">{{ budget.category }}</div>
+                <p>{{getBudgetSpent(budget.category) | currency}}/{{budget.totalAmnt | currency}}</p>
+                <div class="progress">
+                    <div [ngStyle]="{'width': setProgress(budget.totalAmnt, budget.category)}" class="progress-bar progress-bar-striped bg-info" role="progressbar"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">{{ setProgress(budget.totalAmnt, budget.category)}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <h5 class="text-center">Budget Total: {{ totalBudget() | currency }}</h5>
+</div>

@@ -1,0 +1,104 @@
+/* title */
+
+h2 {
+    /* gradient text */
+    background: -moz-linear-gradient(90deg, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 100%);
+    background: linear-gradient(90deg, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01daca", endColorstr="#8a1c7c", GradientType=1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* size */
+    font-size: 3rem;
+}
+
+/* form */
+
+.main-div {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px){
+    .main-div{
+        width: 80%;
+    }
+}
+
+.form-control{
+    color:white;
+    background-color: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.form-control:focus {
+    background-color: rgba(1, 218, 202, 0.5);
+}
+
+/* @media screen and (min-width: 700px) {
+    .main-div {
+        width: 70%;
+    }
+} */
+
+/* login button */
+
+button {
+    /* position */
+    margin-bottom: 1rem;
+    /* border */
+    border-radius: 35px;
+    border: transparent;
+    /* color */
+    background: rgba(232, 28, 130, 1);
+    background: -moz-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232, 28, 130, 1)), color-stop(81%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(138, 28, 124, 1)));
+    background: -webkit-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -o-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: linear-gradient(to bottom, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e81c82', endColorstr='#8a1c7c', GradientType=0);
+}
+
+button:hover {
+    background: rgba(138, 28, 124, 1);
+    background: -moz-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(138, 28, 124, 1)), color-stop(19%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(232, 28, 130, 1)));
+    background: -webkit-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: -o-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: linear-gradient(to bottom, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a1c7c', endColorstr='#e81c82', GradientType=0);
+}
+
+/* form card */
+
+.card {
+    height: 20rem;
+}
+
+/* logo area */
+
+.piggy {
+    background: rgba(232, 28, 130, 1);
+    background: -moz-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232, 28, 130, 1)), color-stop(81%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(138, 28, 124, 1)));
+    background: -webkit-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -o-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: linear-gradient(to bottom, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e81c82', endColorstr='#8a1c7c', GradientType=0);
+    /* border */
+    border-radius: 0 5px 5px 0;
+    border-left: 3px solid black;
+
+    height: 20rem;
+}
+
+.piggy img {
+    margin-top: 2rem;
+    width: 70%;
+    height: 70%;
+}

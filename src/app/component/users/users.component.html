@@ -1,0 +1,26 @@
+<app-navigation></app-navigation>
+<div class="container">
+    <h2 class="text-center text-white">Users</h2>
+    <div class="card container">
+        <div class="card-body">
+            <table class="table table-light my-auto">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Full Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username}}</td>
+                        <td class="pw">{{ user.password }}</td>
+                        <td>{{ user.fullname }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

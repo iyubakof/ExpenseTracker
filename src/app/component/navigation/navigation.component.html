@@ -1,0 +1,19 @@
+<!-- navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" routerLink='/dashboard' routerLinkActive="router-link-active" ><img src="https://image.flaticon.com/icons/svg/584/584093.svg" width="30" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" routerLink='/dashboard' routerLinkActive="router-link-active" >Dashboard</a>
+            <a class="nav-item nav-link" routerLink='/income' routerLinkActive="router-link-active" >Income</a>
+            <a class="nav-item nav-link" routerLink='/expense' routerLinkActive="router-link-active" >Expenses</a>
+            <a class="nav-item nav-link" routerLink='/budget' routerLinkActive="router-link-active" >Budget</a>
+            <a *ngIf="isAdmin" class="nav-item nav-link" routerLink='../users' routerLinkActive="router-link-active" >Users</a>
+          </div>
+          <div class="navbar-nav ml-auto">
+            <button class="btn btn-danger" (click)="logout()">Logout</button>
+          </div>
+        </div>
+      </nav>

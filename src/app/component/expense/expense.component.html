@@ -1,0 +1,40 @@
+<app-navigation></app-navigation>
+<div class="container text-white main-div">
+    <div class="row">
+        <div class="col-sm-12">
+            <a routerLink='/expenseform' [state]="{add:true, title:'Add Expense'}" routerLinkActive="router-link-active"
+                class="btn btn-primary addbtn">+</a>
+        </div>
+    </div>
+
+    <h2 class="text-center">Expenses</h2>
+
+    <!-- <div class="card text-white"> -->
+    <div *ngFor="let expense of expenseItems" class="container">
+        <div class="card">
+            <div class="container">
+                <div class="row">
+                    <div class="card-title col-8">{{ expense.name }}</div>
+                    <div class="col-4">
+                        <button class="btn btn-primary float-right"
+                            (click)="update(expense)">{{expense.amount | currency}}</button>
+                    </div>
+                </div>
+                <p class="type">{{expense.type}}</p>
+                <div class="row">
+                    <div class="col-9">
+                        <p>{{ expense.date | date:shortdate}}</p>
+                    </div>
+
+                    <div class="col-3">
+                        <button (click)="delete(expense.id)"
+                            class="btn btn-warning text-white deletebtn float-right">x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <h5 class="text-center">Expense Total: {{ totalExpense() | currency }}</h5>
+</div>

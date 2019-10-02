@@ -1,0 +1,40 @@
+/* main container */
+
+@media screen and (min-width: 700px) {
+    .main-div {
+        width: 50%;
+    }
+}
+
+/* submit button */
+
+.btn-primary {
+    background: rgba(232, 28, 130, 1);
+    background: -moz-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232, 28, 130, 1)), color-stop(81%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(138, 28, 124, 1)));
+    background: -webkit-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -o-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    background: linear-gradient(to bottom, rgba(232, 28, 130, 1) 0%, rgba(138, 28, 124, 1) 81%, rgba(138, 28, 124, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e81c82', endColorstr='#8a1c7c', GradientType=0);
+    /* border */
+    border: transparent;
+    border-radius: 35px;
+    /* position  */
+    margin-bottom: 1em;
+}
+
+.btn-primary:hover {
+    background: rgba(138, 28, 124, 1);
+    background: -moz-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(138, 28, 124, 1)), color-stop(19%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(232, 28, 130, 1)));
+    background: -webkit-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: -o-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    background: linear-gradient(to bottom, rgba(138, 28, 124, 1) 0%, rgba(138, 28, 124, 1) 19%, rgba(232, 28, 130, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a1c7c', endColorstr='#e81c82', GradientType=0);
+}
+
+.card {
+    margin-top: 2rem;
+}

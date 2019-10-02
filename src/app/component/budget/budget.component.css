@@ -1,0 +1,38 @@
+@media screen and (min-width: 700px) {
+    .main-div {
+        width: 70%;
+    }
+}
+
+/* month */
+.monthlbl{
+    color: #82ff9e;
+}
+
+/* progress bars */
+.progress {
+    /* position */
+    margin-bottom: 1em;
+}
+
+.progress-bar {
+    /* background */
+    background: rgba(1, 218, 202, 1);
+    background: -moz-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 95%, rgba(138, 28, 124, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(1, 218, 202, 1)), color-stop(95%, rgba(138, 28, 124, 1)), color-stop(100%, rgba(138, 28, 124, 1)));
+    background: -webkit-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 95%, rgba(138, 28, 124, 1) 100%);
+    background: -o-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 95%, rgba(138, 28, 124, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 95%, rgba(138, 28, 124, 1) 100%);
+    background: linear-gradient(to right, rgba(1, 218, 202, 1) 0%, rgba(138, 28, 124, 1) 95%, rgba(138, 28, 124, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01daca', endColorstr='#8a1c7c', GradientType=1);
+}
+
+/* card */
+.card {
+    margin-bottom: 2rem;
+}
+
+/* budget total */
+h5 {
+    color: #82ff9e;
+}

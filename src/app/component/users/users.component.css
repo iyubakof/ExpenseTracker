@@ -1,0 +1,35 @@
+/* card container */
+
+.card {
+    /* position */
+    margin-top: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+    .card {
+        width: 65%;
+    }
+}
+
+/* table */
+
+.table {
+    border-radius: 5px;
+    text-align: center;
+    background: #8a1c7c;
+}
+
+.table-light th, .table-light td, .table-light thead th, .table-light tbody, tbody {
+    border-color: transparent !important;
+    color: white;
+}
+
+/* password */
+
+.pw {
+    -webkit-text-security: disc;
+}
+
+.pw:hover {
+    -webkit-text-security: none;
+}
