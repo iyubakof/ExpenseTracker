@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Income } from 'src/app/model/income';
 import { IncomeService } from 'src/app/service/income.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 //implement dialog box to warn they are about to delete
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LoginService } from 'src/app/service/login.service';
@@ -21,17 +21,17 @@ export class IncomeComponent implements OnInit {
   title: string;
 
   constructor(private incomeService: IncomeService, private route: Router, private loginService: LoginService) {
-    this.incomeService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
-      this.incomeItems = data;
-    },
-      error => this.error = error);
+
   }
   ngOnInit() {
+    this.fetchIncome();
+  }
+
+  fetchIncome() {
     this.incomeService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
       this.incomeItems = data;
     },
       error => this.error = error);
-    console.log("from OnInit");
   }
 
   totalIncome() {
@@ -68,15 +68,9 @@ export class IncomeComponent implements OnInit {
     if (yes) {
       //delete
       this.incomeService.deleteIncome(parseInt(sessionStorage.getItem('id')), id).subscribe(data => {
-        this.response = data;
+        //redirect to incomes
+        this.ngOnInit();
       });
-
-      //refetch data
-      this.incomeService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
-        this.incomeItems = data;
-      },
-        error => this.error = error);
-
     }
   }
 }

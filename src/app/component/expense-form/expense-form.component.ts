@@ -40,7 +40,7 @@ export class ExpenseFormComponent implements OnInit {
   }
 
   constructor(private budgetService: BudgetService, private expenseService: ExpenseService, private router: Router) {
-    
+
   }
 
   ngOnInit() {
@@ -63,13 +63,15 @@ export class ExpenseFormComponent implements OnInit {
 
   addExpense() {
     this.expenseService.saveExpense(parseInt(sessionStorage.getItem('id')), this.newExpense).subscribe(expense => {
-      console.log(expense);
+      //redirect to expenses
+      this.router.navigate(['../expense']);
     });
   }
 
   editExpense() {
     this.expenseService.updateExpense(parseInt(sessionStorage.getItem('id')), this.newExpense).subscribe(expense => {
-      console.log(expense);
+      //redirect to expenses
+      this.router.navigate(['../expense']);
     });
   }
 
@@ -80,9 +82,6 @@ export class ExpenseFormComponent implements OnInit {
     else {
       this.editExpense();
     }
-
-    //redirect to expenses
-    this.router.navigateByUrl('expense');
   }
 
 }

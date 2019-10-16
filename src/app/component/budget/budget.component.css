@@ -32,6 +32,41 @@
     margin-bottom: 2rem;
 }
 
+.card:hover {
+    -webkit-animation: shadow-pop-br 1s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+    animation: shadow-pop-br 1s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes shadow-pop-br {
+    0% {
+        -webkit-box-shadow: 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496;
+        box-shadow: 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496;
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        -webkit-box-shadow: 1px 1px #053496, 2px 2px #053496, 3px 3px #053496, 4px 4px #053496, 5px 5px #053496, 6px 6px #053496, 7px 7px #053496, 8px 8px #053496;
+        box-shadow: 1px 1px #053496, 2px 2px #053496, 3px 3px #053496, 4px 4px #053496, 5px 5px #053496, 6px 6px #053496, 7px 7px #053496, 8px 8px #053496;
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+    }
+}
+
+@keyframes shadow-pop-br {
+    0% {
+        -webkit-box-shadow: 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496;
+        box-shadow: 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496, 0 0 #053496;
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        -webkit-box-shadow: 1px 1px #053496, 2px 2px #053496, 3px 3px #053496, 4px 4px #053496, 5px 5px #053496, 6px 6px #053496, 7px 7px #053496, 8px 8px #053496;
+        box-shadow: 1px 1px #053496, 2px 2px #053496, 3px 3px #053496, 4px 4px #053496, 5px 5px #053496, 6px 6px #053496, 7px 7px #053496, 8px 8px #053496;
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+    }
+}
+
 /* budget total */
 h5 {
     color: #82ff9e;

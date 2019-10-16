@@ -49,13 +49,15 @@ export class IncomeFormComponent implements OnInit {
 
   addIncome() {
     this.incomeService.saveIncome(parseInt(sessionStorage.getItem('id')), this.newIncome).subscribe(income => {
-      console.log(income);
+      //redirect to incomes
+      this.router.navigate(['../income']);
     });
   }
 
   editIncome() {
     this.incomeService.updateIncome(parseInt(sessionStorage.getItem('id')), this.newIncome).subscribe(income => {
-      console.log(income);
+      //redirect to incomes
+      this.router.navigate(['../income']);
     });
   }
 
@@ -66,9 +68,6 @@ export class IncomeFormComponent implements OnInit {
     else {
       this.editIncome();
     }
-
-    //redirect to incomes
-    this.router.navigateByUrl('income');
   }
 
 }

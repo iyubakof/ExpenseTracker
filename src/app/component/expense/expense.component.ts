@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Expense } from 'src/app/model/expense';
 import { ExpenseService } from 'src/app/service/expense.service';
 import { Router } from '@angular/router';
-import { Income } from 'src/app/model/income';
 
 @Component({
   selector: 'app-expense',
@@ -19,6 +18,10 @@ export class ExpenseComponent implements OnInit {
   constructor(private expenseService: ExpenseService, private router: Router) { }
 
   ngOnInit() {
+    this.fetchExpenses();
+  }
+
+  fetchExpenses(){
     this.expenseService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
       this.expenseItems = data;
     },
@@ -58,12 +61,7 @@ export class ExpenseComponent implements OnInit {
     if (yes) {
       //delete
       this.expenseService.deleteExpense(parseInt(sessionStorage.getItem('id')), id).subscribe(data => {
-        console.log(data);
-      });
-
-      //refetch data
-      this.expenseService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
-        this.expenseItems = data;
+        this.ngOnInit();
       });
 
     }
