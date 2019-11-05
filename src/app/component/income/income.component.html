@@ -27,7 +27,7 @@
                 </div> -->
                 <div class="row">
                     <div class="col-sm-9">
-                        <p>{{ income.date | date:shortdate}}</p>
+                        <p>{{ income.date | date:'shortDate'}}</p>
                     </div>
                     <div class="col-sm-3">
                         <button (click)="delete(income.id)"
