@@ -17,7 +17,7 @@
                     <div class="card-title col-8">{{ expense.name }}</div>
                     <div class="col-4">
                         <button class="btn btn-primary float-right"
-                            (click)="update(expense)">{{expense.amount | currency}}</button>
+                            (click)="update(expense)">{{ expense.amount | currency}}</button>
                     </div>
                 </div>
                 <p class="type">{{expense.type}}</p>
@@ -36,5 +36,5 @@
     </div>
     <!-- </div> -->
 
-    <h5 class="text-center">Expense Total: {{ totalExpense() | currency }}</h5>
+    <h5 class="text-center">Expense Total: {{ totalExpense(0) | currency }}</h5>
 </div>

@@ -28,16 +28,16 @@ export class ExpenseComponent implements OnInit {
       error => this.error = error);
   }
 
-  totalExpense() {
-    if (this.sum == 0) {
+  totalExpense(tEx:number) {
+    if (tEx == 0) {
       this.expenseItems.forEach(e => {
-        this.sum = this.sum + e.amount;
+        tEx += e.amount;
       });
 
-      return this.sum;
+      return tEx;
     }
 
-    this.sum = 0;
+    // this.sum = 0;
   }
 
   update(expense: Expense) {

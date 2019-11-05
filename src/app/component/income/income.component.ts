@@ -34,16 +34,16 @@ export class IncomeComponent implements OnInit {
       error => this.error = error);
   }
 
-  totalIncome() {
-    if (this.sum == 0) {
+  totalIncome(tIn: number) {
+    if (tIn == 0) {
       this.incomeItems.forEach(t => {
-        this.sum = this.sum + t.amount;
+        tIn += t.amount;
       });
 
-      return this.sum;
+      return tIn;
     }
 
-    this.sum = 0;
+    // this.sum = 0;
   }
 
   update(income: Income, i) {
