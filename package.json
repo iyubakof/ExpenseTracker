@@ -24,7 +24,7 @@
     "angular-webstorage-service": "^1.0.2",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng2-charts": "^2.3.0",
     "popper.js": "^1.14.7",
     "rxjs": "~6.4.0",
