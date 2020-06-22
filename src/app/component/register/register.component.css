@@ -125,8 +125,8 @@ h2 {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e81c82', endColorstr='#8a1c7c', GradientType=0);
     height: 20rem;
     /* border */
-    border-radius: 0 5px 5px 0;
-    border-left: 3px solid black;
+    border-radius: 5px 0 0 5px;
+    border-right: 3px solid black;
 }
 
 .piggy img {

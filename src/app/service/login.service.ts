@@ -9,17 +9,23 @@ export class LoginService {
 
   users: User[];
   valid: boolean = false;
+  available: boolean = false;
   currentUser:any;
   isUserLoggedIn = JSON.parse(sessionStorage.getItem('loggedIn')||'false');
 
   constructor(private userService: UserServiceService) { 
-    userService.findAllUsers().subscribe(data => {
+    this.getAllUsers();
+  }
+
+  getAllUsers(){
+    this.userService.findAllUsers().subscribe(data => {
       this.users = data;
     });
   }
 
   //verify user
-  verifyUser(username: string, password: string) {      
+  verifyUser(username: string, password: string) {   
+    this.getAllUsers();   
     for (let i = 0; i < this.users.length; i++) {
       if (username == this.users[i].username && password == this.users[i].password) {
         this.valid = true;
@@ -33,6 +39,17 @@ export class LoginService {
     }
 
     return this.valid;
+  }
+
+  doesUserExist(username: string){
+    for(let i = 0; i < this.users.length; i++){
+      if(username == this.users[i].username){
+        this.available = true;
+        break;
+      }
+    }
+
+    return this.available;
   }
 
   isUserLogIn():boolean{

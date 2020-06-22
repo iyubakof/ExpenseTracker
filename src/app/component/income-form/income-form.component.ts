@@ -38,7 +38,7 @@ export class IncomeFormComponent implements OnInit {
     this.add = history.state.add;
     this.title = history.state.title;
 
-    if (this.add == false) {
+    if (!this.add) {
       this.newIncome.id = history.state.id;
       this.newIncome.type = history.state.type;
       this.newIncome.name = history.state.name;
@@ -48,6 +48,7 @@ export class IncomeFormComponent implements OnInit {
   }
 
   addIncome() {
+    this.newIncome.date = new Date(this.newIncome.date);
     this.incomeService.saveIncome(parseInt(sessionStorage.getItem('id')), this.newIncome).subscribe(income => {
       //redirect to incomes
       this.router.navigate(['../income']);
@@ -62,7 +63,7 @@ export class IncomeFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (this.add == true) {
+    if (this.add) {
       this.addIncome();
     }
     else {

@@ -19,6 +19,8 @@ export class IncomeComponent implements OnInit {
   sum: number = 0;
   add: boolean;
   title: string;
+  d = new Date();
+  m = this.d.getMonth() + 1;
 
   constructor(private incomeService: IncomeService, private route: Router, private loginService: LoginService) {
 
@@ -28,7 +30,7 @@ export class IncomeComponent implements OnInit {
   }
 
   fetchIncome() {
-    this.incomeService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
+    this.incomeService.findAll(parseInt(sessionStorage.getItem('id')), this.m).subscribe(data => {
       this.incomeItems = data;
     },
       error => this.error = error);

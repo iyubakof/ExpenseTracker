@@ -3,8 +3,23 @@
     <br>
     <div class="container card main-div">
         <div class="row">
-            <form (ngSubmit)="onSubmit(login)" #login="ngForm" class="col-6 my-auto login-form">
+            <div class="col-6 text-center piggy">
+                <img src="https://image.flaticon.com/icons/svg/584/584093.svg">
+                <h4>Welcome Back!</h4>
+                <p>Login and keep connected with your finances!</p>
+                <div class="row">
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-info" (click)="goToLogin()">Login</button>
+                    </div>
+                </div>
+            </div>
+            <form (ngSubmit)="onRegister(signup)" #signup="ngForm" class="col-6 my-auto signup-form">
                 <div class="container">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input [(ngModel)]="user.fullname" name="fullname" type="text" id="fullname"
+                            class="form-control" required autocomplete="off">
+                    </div>
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input [(ngModel)]="user.username" name="username" type="text" id="username"
@@ -17,22 +32,12 @@
                     </div>
                     <div class="row">
                         <div class="col text-center">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
                     </div>
                     <small>{{message}}</small>
                 </div>
             </form>
-            <div class="col-6 text-center piggy">
-                <img src="https://image.flaticon.com/icons/svg/584/584093.svg">
-                <h4>Hi There!</h4>
-                <p>Sign up and take control of your finances today!</p>
-                <div class="row">
-                    <div class="col text-center">
-                        <button type="button" class="btn btn-info" (click)="goRegister()">Sign Up</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

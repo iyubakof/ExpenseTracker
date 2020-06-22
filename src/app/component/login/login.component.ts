@@ -13,6 +13,7 @@ import { SESSION_STORAGE, WebStorageService } from 'angular-webstorage-service';
 export class LoginComponent implements OnInit {
 
   valid:boolean = false;
+  available:boolean = false;
   message: string;
   user: User = {
     id: null,
@@ -29,13 +30,17 @@ export class LoginComponent implements OnInit {
   onSubmit(form: NgForm){
     this.valid = this.loginService.verifyUser(this.user.username, this.user.password);
 
-    if(this.valid == true){
+    if(this.valid){
       this.route.navigate(['dashboard']);
     }
     else {
       this.message = "Invalid Credentials";
       this.route.navigateByUrl('');
     }
+  }
+
+  goRegister(){
+    this.route.navigateByUrl('/register');
   }
 
 }

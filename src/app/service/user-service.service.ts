@@ -21,12 +21,14 @@ export class UserServiceService {
 
   //post
   public saveUser(user: User){
+    console.log("creating user...");
     return this.http.post<User>(this.userUrl, user);
   }
 
   //put
   public updateUser(user: User): Observable<User>{
-    return this.http.put<User>(this.userUrl, user);
+    const url = `${this.userUrl}/${user.id}`;
+    return this.http.put<User>(url, user);
   }
 
   //delete

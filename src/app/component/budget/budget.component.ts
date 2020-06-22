@@ -18,6 +18,8 @@ export class BudgetComponent implements OnInit {
   sum: number = 0;
   progress: number;
   budgetSum: number;
+  d = new Date();
+  m = this.d.getMonth() + 1;
 
   constructor(private budgetService: BudgetService, private expenseService: ExpenseService) { }
 
@@ -27,7 +29,7 @@ export class BudgetComponent implements OnInit {
     },
       error => this.error = error);
 
-    this.expenseService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(edata => {
+    this.expenseService.findAll(parseInt(sessionStorage.getItem('id')), this.m).subscribe(edata => {
       this.expenseItems = edata;
     },
       error => this.error = error);
@@ -39,8 +41,7 @@ export class BudgetComponent implements OnInit {
     var months: string[] = ["January", "February", "March", "April", "May",
       "June", "July", "August", "September", "October", "November", "December"];
 
-    let d = new Date("2019-09-30");
-    let currMonth = months[d.getMonth()];
+    let currMonth = months[this.d.getMonth()];
 
     return currMonth;
   }

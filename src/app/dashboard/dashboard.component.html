@@ -6,6 +6,7 @@
 
     <!-- main card -->
     <div class="card container main-card">
+        <p class="monthlbl">Month: {{ getCurrMonth() }}</p>
         <div class="row container mx-auto">
             <div class="card income col-md-3 stat-cards">
                 <div class="row stat-row">
@@ -34,7 +35,7 @@
             <div class="card budget col-md-2 stat-cards">
                 <div class="stat-row">
                     <p class="text-center my-auto">You are currently <span
-                            [ngStyle]="{color: overBalance ? 'red' : '#82ff9e'}">{{ withinBudget() }}</span> your total
+                            [ngStyle]="{color: underBudget ? 'red' : '#82ff9e'}">{{ withinBudget() }}</span> your total
                         budget</p>
                 </div>
             </div>

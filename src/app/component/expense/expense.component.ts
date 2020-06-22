@@ -13,7 +13,8 @@ export class ExpenseComponent implements OnInit {
   expenseItems: Expense[];
   error: string;
   sum: number = 0;
-
+  d = new Date();
+  m = this.d.getMonth() + 1;
 
   constructor(private expenseService: ExpenseService, private router: Router) { }
 
@@ -22,7 +23,7 @@ export class ExpenseComponent implements OnInit {
   }
 
   fetchExpenses(){
-    this.expenseService.findAll(parseInt(sessionStorage.getItem('id')), 9).subscribe(data => {
+    this.expenseService.findAll(parseInt(sessionStorage.getItem('id')), this.m).subscribe(data => {
       this.expenseItems = data;
     },
       error => this.error = error);

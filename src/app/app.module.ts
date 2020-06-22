@@ -19,9 +19,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExpenseFormComponent } from './component/expense-form/expense-form.component';
 import { ChartsModule } from 'ng2-charts';
+import { RegisterComponent } from './component/register/register.component';
+import { BudgetFormComponent } from './component/budget-form/budget-form.component';
 
 const routes:Routes = [
   {path: '', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'users', component: UsersComponent, canActivate: [AdminGuard]},
   {path: 'budget', component: BudgetComponent, canActivate: [AuthGuard]},
@@ -43,11 +46,13 @@ const routes:Routes = [
     LoginComponent,
     NavigationComponent,
     DashboardComponent,
-    ExpenseFormComponent
+    ExpenseFormComponent,
+    RegisterComponent,
+    BudgetFormComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'}),
+    RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload', useHash: true }),
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
